@@ -43,10 +43,3 @@ def regpage():
 
 
     return render_template("register.html")
-
-
-
-
-
-
-

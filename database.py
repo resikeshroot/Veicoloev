@@ -4,7 +4,7 @@ password=""
 database="register"
 
 def select(q):
-	con=mysql.connector.connect(user=user,password="",host="localhost",database=database,port=80)
+	con=mysql.connector.connect(user=user,password="",host="localhost",database=database,port=3306)
 	cur=con.cursor(dictionary=True)
 	cur.execute(q)
 	result=cur.fetchall()
@@ -13,7 +13,7 @@ def select(q):
 	return result
 
 def insert(q):
-	con=mysql.connector.connect(user=user,password=password,host="localhost",database=database,port=80)
+	con=mysql.connector.connect(user=user,password=password,host="localhost",database=database,port=3306)
 	cur=con.cursor(dictionary=True)
 	cur.execute(q)
 	con.commit()
@@ -23,7 +23,7 @@ def insert(q):
 	return result
 
 def update(q):
-	con=mysql.connector.connect(user=user,password=password,host="localhost",database=database,port=80)
+	con=mysql.connector.connect(user=user,password=password,host="localhost",database=database,port=3306)
 	cur=con.cursor(dictionary=True)
 	cur.execute(q)
 	con.commit()
