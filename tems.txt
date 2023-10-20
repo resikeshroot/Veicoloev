@@ -42,4 +42,4 @@ def regpage():
         insert(d)
 
 
-    return render_template("register.html"))
+    return render_template("register.html")
